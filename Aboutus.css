@@ -1,0 +1,437 @@
+/* General Styles */
+body {
+    margin: 0; /* Resetting default margin */
+    background-color: rgb(148, 140, 140); /* Setting background color to black */
+    color: #d91d1d; /* Setting text color to a shade of red */
+    font-family: 'Poppins', sans-serif; /* Applying Poppins font */
+    font-size: 12px; /* Setting base font size to 12 pixels */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: -20px;
+    width: 100%; /* Modified to cover 100% of the screen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.6s;
+    padding: 40px ; /* Adjusted for better spacing */
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 20px 5%; /* Adjusted for better spacing */
+    background: #fff;
+}
+
+header .logo {
+    margin-left: 70px;
+    position: relative;
+    font-weight: 700;
+    color: magenta;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.6s;
+    margin-right: auto;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li a {
+    margin-left: 10px;
+    margin-right: 80px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: color 0.6s;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #000;
+}
+
+/* Main part */
+:root {
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(255, 124, 10);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Correcting font family */
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.profiles {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.profile {
+    width: fit-content;
+    height: fit-content;
+    min-width: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-top: 20px;
+    margin: 20px;
+    max-height: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.details span {
+    font-weight: 300;
+}
+
+.card {
+    width: 320px;
+    height: 300px;
+    margin-bottom: 20px;
+    background: var(--primary);
+    box-sizing: border-box;
+    padding: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 6mm;
+    position: relative;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    margin-bottom: 5px;
+}
+
+.head img {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 5mm;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 200;
+    width: fit-content;
+    margin-left: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0 8px;
+    border-radius: 3mm;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 15px;
+    position: relative;
+}
+
+.role {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.icons {
+    backdrop-filter: blur(9px) saturate(180%);
+    -webkit-backdrop-filter: blur(9px) saturate(180%);
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-radius: 7mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 70%;
+    transform: translate(-50%, 0);
+    background: var(--secondary);
+    width: 60px;
+    height: 30px;
+    filter: blur(30px);
+}
+
+.icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.35s;
+}
+
+.icons a:hover {
+    background: white;
+    color: var(--primary);
+    border-radius: 50%;
+}
+
+.card::before {
+    position: absolute;
+    content: "\E55F"; /* Unicode of the 'location_pin' icon */
+    font-family: "Material Icons";
+    color: var(--primary);
+    font-size: 85px;
+    top: calc(100% - 7px);
+    left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+}
+
+.profile:hover {
+    max-height: 500px;
+}
+
+.profile:hover #picture {
+    border: 5px solid var(--primary);
+}
+
+.profile:hover .card {
+    display: flex;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1%,
+    50% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.profile:nth-child(odd) {
+    --secondary: rgb(0, 0, 0);
+    --primary: rgb(255, 124, 10);
+}
+
+
+/* Footer */
+
+footer {
+    position: relative;
+    width: 90%; /* Modified to cover 100% of the screen*/
+    padding: 50px 5%; /*Adjusted for better spacing */
+    background: #332828; 
+    height: 120px;
+}
+
+footer .container {
+    width: 90%; /* Adjusted to cover 90% of the screen */
+    max-width: 1300px; /* Added max-width for better responsiveness */
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+footer.container .sec h2 {
+    position: relative;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer.container .sec p {
+    color: #555;
+}
+
+footer.container .sci {
+    margin-top: 10px;
+    display:flex;
+    grid-template-columns: repeat(4, 50px);
+}
+footer .container .sci .fa-facebook-f {
+   padding-right: 10px;
+   font-size: 30px;
+   margin-left: -42px;
+}
+
+footer .container .sci .fa-twitter {
+   padding-right: 10px;
+   font-size: 30px;
+}
+
+footer .container .sci .fa-instagram {
+   padding-right: 10px;
+   font-size: 30px;
+}
+
+footer .container .sci .fa-youtube {
+   padding-right: 10px;
+   font-size: 30px;
+}
+
+
+footer .container .sci li {
+    list-style: none;
+}
+
+footer .container .sci li a {
+    display: inline-block;
+    width: 360px;
+    height: 36px;
+    background: #333;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+footer .container .sci li a i {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .container .quicklinks {
+    position: relative;
+}
+
+footer .container .quicklinks ul li {
+    list-style: none;
+}
+
+footer .container .quicklinks ul li a {
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: -39px;
+}
+
+footer .container .contact .info {
+    position: relative;
+}
+
+footer .container .contact .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 10px;
+    margin-left: -37px;
+}
+
+footer .container .contact .info li span {
+    color: #555;
+    font-size: 20px;
+}
+
+footer .container .contact .info li a {
+    color: #555;
+    text-decoration: none;
+}
+
+.copyrightText {
+    width: 1366px; /* Adjusted to cover 90% of the screen */
+    background: #fff;
+    padding: 10px 5% 30px; /* Adjusted for better spacing */
+    text-align: center;
+    color: #555;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    height: 10px;
+}
+
+@media (max-width: 991px) {
+    footer {
+        padding: 40px 5%; /* Adjusted for better spacing */
+    }
+
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .copyrightText {
+        padding: 20px 5% 30px; /* Adjusted for better spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
